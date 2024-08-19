@@ -2,7 +2,7 @@
 
 const { subtract } = require("../calclibrary");
 
-describe("Testing sum with integers", () => {
+describe("Testing subtract with integers", () => {
   test("subtract(1,1) returns 2", () => {
     expect(subtract(1, 1)).toBe(0);
   });
@@ -33,7 +33,7 @@ describe("Testing sum with integers", () => {
   });
 });
 
-describe('Testing with floats', () => {
+describe('Testing subtract with floats', () => {
   const testValues = [
     // a,b, result
     [10, 11.5, -1.5],
