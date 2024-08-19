@@ -5,15 +5,30 @@
 Function returns the sum of two numbers. Numbers are passed as parameters a and b
 
 parameters:
-a number, -500 =< a <= 500
-b number, -500 =< b <= 500
+a number, -500 <= a <= 500
+b number, -500 <= b <= 500
 
 returns 
-sum of given numbers a and b as number, -1000 =< a+b <= 1000
+sum of given numbers a and b as number, -1000 <= a+b <= 1000
 
 if parameter is missing, throws and exception`'parameter missing'`
 if parameters are not numbers, throws an exception`'only numbers allowed'`
 if parameters are not in right interval, throw an exception `'numbers not between -500 and 500'`
+
+## **subtract(a,b)**
+
+Function returns the difference a-b of two numbers. Numbers are passed as parameters a and b.
+
+parameters:
+
+a number, -500 <= a <=500
+b number, -500 <= b <=500
+
+returns difference a-b
+
+If parameter is missing, throws and exception`'parameter missing'`
+If parameters are not numbers, throws an exception`'only numbers allowed'`
+If parameters are not in right interval, throw an exception `'numbers not between -500 and 500'`
 
 ## Test cases
 

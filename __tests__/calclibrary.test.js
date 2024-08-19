@@ -1,6 +1,6 @@
 "use strict";
 
-const { sum } = require("../calclibrary");
+const { sum, subtract } = require("../calclibrary");
 
 describe("Testing sum with integers", () => {
   test("sum(1,1) returns 2", () => {
@@ -82,4 +82,32 @@ describe('parameters are not number', () => {
     expect(() => sum(a, b)).toThrow("only numbers allowed");
   });
 })
+
+describe("Test parameters not between -500 and 500", () => {
+  const testValues = [
+    // a, b
+    [1000, 500],
+    [500, 501],
+    [-500.1, 200],
+    [300, 500.1],
+  ];
+
+  test.each(testValues)('sum(%s, %s) throws exception', (a, b) => {
+    expect(() => sum(a, b)).toThrow("numbers not between -500 and 500");
+  });
+});
+
+describe("Test parameters not between -500 and 500", () => {
+  const testValues = [
+    // a, b
+    [1000, 500],
+    [500, 501],
+    [-500.1, 200],
+    [300, 500.1],
+  ];
+
+  test.each(testValues)("subtract(%s, %s) throws exception", (a, b) => {
+    expect(() => subtract(a, b)).toThrow("numbers not between -500 and 500");
+  });
+});
 
